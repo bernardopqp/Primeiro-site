@@ -4,10 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu primeiro site</title>
+    <title>Meu Primeiro Site</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #080b1a, #171044, #082c4f);
+            background-size: 200% 200%;
+            animation: fundo 8s ease infinite;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            padding: 45px 25px;
+            border: 1px solid #ffffff30;
+            border-radius: 24px;
+            background: #ffffff0d;
+            box-shadow: 0 0 40px #3867ff30;
+            animation: aparecer 1.2s ease;
+        }
+
+        .icone {
+            font-size: 45px;
+            color: #70a5ff;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 18px;
+        }
+
+        h1 span {
+            color: #70a5ff;
+        }
+
+        p {
+            color: #c5c9dc;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #4776ff, #9b59ff);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .botao:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px #735cff80;
+        }
+
+        .rodape {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #8e96b5;
+        }
+
+        @keyframes fundo {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Olá mundo!</h1>
-    <p>Este é meu primeiro site feito por mim.</p>
+    <main class="card">
+        <div class="icone">&lt;/&gt;</div>
+
+        <h1>Olá, <span>mundo!</span></h1>
+
+        <p>
+            Este é meu primeiro site publicado na internet.
+            Estou começando minha jornada na programação
+            e aprendendo algo novo a cada dia.
+        </p>
+
+        <a class="botao" href="#projeto">
+            Conhecer meu projeto ↓
+        </a>
+
+        <div class="rodape" id="projeto">
+            Desenvolvido por mim • 2026
+        </div>
+    </main>
 </body>
 </html>
+
